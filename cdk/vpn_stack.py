@@ -95,6 +95,9 @@ class VpnStack(core.Stack):
             {'env_param': 'VPN_PASSWORD', 'description': 'The VPN password'},
             {'env_param': 'VPN_ADDL_USERS', 'description': 'Additional VPN usernames'},
             {'env_param': 'VPN_ADDL_PASSWORDS', 'description': 'Additional VPN password'},
+            {'env_param': 'VPN_DNS_SRV1', 'description': 'Alternative DNS servers #1'},
+            {'env_param': 'VPN_DNS_SRV2', 'description': 'Alternative DNS servers #2'},
+
         ]
 
         for p in params:

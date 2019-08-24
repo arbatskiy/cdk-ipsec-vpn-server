@@ -26,5 +26,5 @@ done
 sudo service docker start
 
 # start ipsec vpn container in daemon mode, always restart
-sudo docker run -e "VPN_IPSEC_PSK=${VPN_IPSEC_PSK}" -e "VPN_USER=${VPN_USER}" -e "VPN_PASSWORD=${VPN_PASSWORD}" -e "VPN_ADDL_USERS=${VPN_ADDL_USERS}" -e "VPN_ADDL_PASSWORDS=${VPN_ADDL_PASSWORDS}" --restart=always -p 500:500/udp -p 4500:4500/udp --privileged -d hwdsl2/ipsec-vpn-server
+sudo docker run -e "VPN_IPSEC_PSK=${VPN_IPSEC_PSK}" -e "VPN_USER=${VPN_USER}" -e "VPN_PASSWORD=${VPN_PASSWORD}" -e "VPN_ADDL_USERS=${VPN_ADDL_USERS}" -e "VPN_ADDL_PASSWORDS=${VPN_ADDL_PASSWORDS}" -e "VPN_DNS_SRV1=${VPN_DNS_SRV1}" -e "VPN_DNS_SRV2=${VPN_DNS_SRV2}" --restart=always -p 500:500/udp -p 4500:4500/udp --privileged -d hwdsl2/ipsec-vpn-server
 
