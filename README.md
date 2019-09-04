@@ -30,7 +30,7 @@ Deployment of hwdsl2/docker-ipsec-vpn-server docker image on Amazon Web Services
     ```
     pip install -r requirements.txt
     ```
-    - pipenv users:
+    - For pipenv users:
     ```
     pipenv install
     ```
@@ -42,8 +42,8 @@ Deployment of hwdsl2/docker-ipsec-vpn-server docker image on Amazon Web Services
 1. To deploy the stack into an AWS account run:
     ```
     cdk deploy
-    ``` 
-1.  Stack associates Elastic IP with EC2 instance. Check AWS Console to find out a Public IP address or run:
+    ```
+1.  The stack associates Elastic IP with EC2 instance. Check AWS Console to find out a Public IP address or run:
     ```
     aws ec2 describe-addresses --allocation-ids $(aws cloudformation describe-stacks --stack-name vpn-cdk --query "Stacks[0].Outputs[?OutputKey=='AllocationId'].OutputValue" --output text) | grep 'PublicIp"'
     ```
